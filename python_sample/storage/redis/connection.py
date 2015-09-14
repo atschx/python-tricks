@@ -1,8 +1,7 @@
 import redis
-from python_sample import settings
+import settings
 
 connection_pool = None
-
 
 def get_redis_connection(server_name='default'):
     '''

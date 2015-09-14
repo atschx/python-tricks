@@ -1,4 +1,7 @@
-
+#!/usr/bin/env python
+#coding:utf-8
+#author:albert
+#date:2015-09-14
 
 # : we recommend that you connect to Redis via Twemproxy
 SAMPLE_REDIS_CONFIG = {

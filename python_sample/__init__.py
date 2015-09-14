@@ -1,0 +1,7 @@
+__author__ = 'Albert'
+__copyright__ = 'Copyright 2015, Albert Sun'
+__license__ = 'MIT'
+__version__ = '0.0.1'
+__maintainer__ = 'Albert Sun'
+__email__ = 'atschx@gmail.com'
+__status__ = 'Production'
