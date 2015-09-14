@@ -20,7 +20,43 @@
 
 ## 记录日志
 
-使用logging模块
+> 日志logging使用示例
+
+``` python
+	global_logger = logging.getLogger("sample")
+
+	#config
+	global_logger.setLevel(logging.DEBUG)
+
+	# 创建一个handler，用于写入日志文件
+	fh = logging.FileHandler('/tmp/sample-debug.log')
+	fh.setLevel(logging.DEBUG)
+
+	# 再创建一个handler，用于输出到控制台
+	ch = logging.StreamHandler()
+	ch.setLevel(logging.DEBUG)
+
+	# 定义handler的输出格式
+	formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')
+	fh.setFormatter(formatter)
+	ch.setFormatter(formatter)
+
+	# 给logger添加handler
+	global_logger.addHandler(fh)
+	global_logger.addHandler(ch)
+```
+
+## 存储(cassandra)
+
+创建名为`sample`的keyspaces.
+
+``` 
+CREATE KEYSPACE IF NOT EXISTS sample WITH replication ={'class':'SimpleStrategy','replication_factor':2}
+```
+
+[详情参考这里](http://datastax.github.io/python-driver/api/index.html)
+
+## 后记
 
 python框架和应用的区别？
 

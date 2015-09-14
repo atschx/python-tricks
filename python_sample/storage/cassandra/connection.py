@@ -1,6 +1,6 @@
-from cassandra.cqlengine import connection
-from stream_framework import settings
+from cassandra.cluster import Cluster
 
+import settings
 
 def setup_connection():
     connection.setup(
