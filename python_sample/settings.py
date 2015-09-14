@@ -18,5 +18,4 @@ SAMPLE_REDIS_CONFIG = {
 #redis配置
 
 #基础cassandra配置
-
-CASSANDRA_HOSTS = ['localhost']
+SAMPLE_CASSANDRA_HOSTS = ['localhost']
